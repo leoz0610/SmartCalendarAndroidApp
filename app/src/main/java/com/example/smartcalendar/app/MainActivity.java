@@ -14,9 +14,9 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
             /*getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new CalendarFragment())
+                    .add(R.id.container, new MonthlyCalendarFragment())
                     .commit();*/
-            CalendarFragment calendarFragment = (CalendarFragment)getSupportFragmentManager().findFragmentById(R.id.fragCalendar);
+            MonthlyCalendarFragment calendarFragment = (MonthlyCalendarFragment)getSupportFragmentManager().findFragmentById(R.id.fragCalendar);
         }
     }
 

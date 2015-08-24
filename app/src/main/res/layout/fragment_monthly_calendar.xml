@@ -10,12 +10,12 @@
                 tools:context=".CalendarFragment">
 
     <TextView
-            android:text="@string/hello_world"
+            android:id="@+id/txtMonCalendarHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
     <GridView
-            android:numColumns="4"
-            android:id="@+id/gridCalendar"
+            android:numColumns="7"
+            android:id="@+id/gridMonthlyCalendar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 

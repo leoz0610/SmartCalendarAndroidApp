@@ -13,6 +13,10 @@ public class MonthModel extends ArrayList<DayModel> {
     public MonthModel(DateTime dateTime) {
         daysInMonth = dateTime.dayOfMonth().getMaximumValue();
 
+        for (int i = 0; i < 7; i++) {
+            add(null);
+        }
+
         for (int i = 0; i < daysInMonth; i++) {
             add(new DayModel(i + 1));
         }

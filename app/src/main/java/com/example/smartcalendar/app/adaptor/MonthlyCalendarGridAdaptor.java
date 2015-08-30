@@ -1,5 +1,6 @@
 package com.example.smartcalendar.app.adaptor;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -50,6 +51,12 @@ public class MonthlyCalendarGridAdaptor extends ArrayAdapter<DayModel> {
             }
         }else if (position % 2 == 0) {
             textView.setBackgroundColor(Color.WHITE);
+            textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                }
+            });
             textView.setText(getItem(position).toString());
         } else {
             textView.setBackgroundColor(Color.LTGRAY);

@@ -1,17 +1,24 @@
 package com.example.smartcalendar.app;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
-public class WeeklyCalendarActivity extends ActionBarActivity {
+public class WeeklyCalendarActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weekly_calendar);
+
+        TextView header = (TextView) findViewById(R.id.txtWeeklyCalendarHeader);
+        Intent receivedIntent = getIntent();
+        int position = receivedIntent.getIntExtra("Position", -1);
+        header.setText(header.getText() + " " + Integer.valueOf(position).toString());
     }
 
 

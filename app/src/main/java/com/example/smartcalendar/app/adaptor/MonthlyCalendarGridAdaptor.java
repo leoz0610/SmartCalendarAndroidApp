@@ -8,7 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.content.Intent;
 import com.example.smartcalendar.app.R;
+import com.example.smartcalendar.app.WeeklyCalendarActivity;
 import com.example.smartcalendar.app.model.DayModel;
 import com.example.smartcalendar.app.model.WEEKDAY;
 
@@ -26,7 +28,7 @@ public class MonthlyCalendarGridAdaptor extends ArrayAdapter<DayModel> {
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
         View newView = null;
 
         if (convertView == null) {
@@ -54,7 +56,10 @@ public class MonthlyCalendarGridAdaptor extends ArrayAdapter<DayModel> {
             textView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
+                    Context context = getContext();
+                    Intent newActivityIntent = new Intent(context, WeeklyCalendarActivi
+                            
+                    context.startActivity(newActivityIntent);
                 }
             });
             textView.setText(getItem(position).toString());
